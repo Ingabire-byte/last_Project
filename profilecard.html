@@ -1,0 +1,122 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" 
+          content="width=device-width, 
+                    initial-scale=1.0"> 
+    <link rel="stylesheet"
+          href="profilecard.css"> 
+    <link rel="stylesheet" 
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <link rel="stylesheet"
+          href= 
+"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"> 
+    <title>Toggle Profile Card</title> 
+
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutMe.html">About</a></li>
+          <li><a href="profileCard.html">Profile Card</a></li>
+          <li><a href="portfolio.html">Personal Portfolio</a></li>
+          <li><a href="weatherApp.html">weather App</a></li>
+          <li><a href="contactMe.html">contact</a></li>
+          <li><a href="testimonial.html">testimoniol Slider</a></li>
+          <li><a href="menu.html">Menu</a></li>
+        </ul>
+      </nav>
+</head> 
+  
+<body> 
+    <header> 
+        <h1 class="logo">JOY@BACKEND</h1> 
+        <h3 class="subtitle"> 
+          JOY'S Card
+          </h3> 
+    </header> 
+    <div class="profile-card"> 
+        <div class="card-header"> 
+            <img src= "pi2.jpeg" alt="Profile Picture"> 
+            <h2>JOY INGABIRE</h2> 
+            <div id="toggle-details" 
+                 class="toggle-button"> 
+                <i class="fas fa-chevron-down"></i> 
+            </div> 
+        </div> 
+        <div class="card-details"> 
+            <p> 
+                  <strong>Email:</strong>ingabirejoy25@gmail.com
+              </p> 
+            <p> 
+                  <strong>Location:</strong>  
+                  Kigali-Rwanda, GISOZI(ULK)
+              </p> 
+            <p> 
+                  <strong>Interests:</strong> Web Development, Design 
+              </p> 
+            <div class="social-icons"> 
+                <a href="https://en.wikipedia.org/wiki/Twitter" 
+                   class="icon-link"> 
+                      <i class="fab fa-twitter"></i> 
+                  </a> 
+                <a href="https://en.wikipedia.org/wiki/Joy" 
+                   class="icon-link"> 
+                      <i class="fab fa-facebook"></i> 
+                  </a> 
+                <a href="" 
+                   class="icon-link"> 
+                      <i class="fab fa-instagram"></i> 
+                  </a> 
+                <a href="#" 
+                   class="icon-link"> 
+                      <i class="fab fa-linkedin"></i> 
+                  </a> 
+            </div> 
+        </div> 
+    </div> 
+    <script src="profilecard.js"></script> 
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body> 
+  
+</html>
